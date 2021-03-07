@@ -19,17 +19,26 @@ a:hover {
     text-decoration: underline;
 }
 
+.anchor {
+    padding-top: 45px;
+    margin-top: -45px;
+    display: block;
+}
+
 nav {
     background-color: #505050;
     color: white;
-    padding: 10px 0;
+    height: 45px;
     position: sticky;
     top: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
     color: white;
-    margin: 0 10px;
+    margin: 0 28px;
     text-transform: uppercase;
     letter-spacing: .2rem;
 }
@@ -43,7 +52,7 @@ nav {
 }
 
 .row-story {
-    height: 200px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,20 +111,22 @@ nav {
 .header-row {
     display: flex;
     align-items: center;
+    background-color: #505050;
+    color: white;
 }
 
 .logo {
-    opacity: .4;
+    filter: invert(100%);
     height: 70px;
 }
 
 .heading {
     text-transform: uppercase;
     font-weight: bold;
-    text-decoration: underline;
     text-decoration-thickness: 4px;
     text-decoration-color: #ffd342;
     letter-spacing: .2rem;
+    font-size: 18px;
 }
 
 .content {
@@ -177,9 +188,15 @@ table.main-info td {
         border-bottom: 2px solid gray;
     }
 
-    .schedule-left, .schedule-right, .faq, .contact {
+    .schedule-left, .schedule-right {
         text-align: center;
         width: 50%;
+        font-size: 16px;
+    }
+
+    .faq {
+        width: 100%;
+        font-size: 16px;
     }
 
     .bordered-container {
@@ -209,7 +226,7 @@ table.main-info td {
     }
 
     .row-when {
-        height: 100px;
+        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -241,7 +258,7 @@ table.main-info td {
         border-bottom: 2px solid gray;
     }
 
-    .schedule-left, .schedule-right, .faq, .contact {
+    .schedule-left, .schedule-right, .faq {
         text-align: center;
         width: 100%;
     }
