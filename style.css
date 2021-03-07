@@ -54,7 +54,7 @@ nav {
 .row-faq {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     min-height: 250px;
     padding: 30px;
@@ -69,8 +69,6 @@ nav {
     margin-top: 5px;
     color: #777;
 }
-
-
 
 .outer-border {
     border: 2px solid #BBB;
@@ -144,7 +142,7 @@ table.main-info td {
 }
 
 /* Large Screens */
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 601px) {
     .big-date {
         font-size: 192px;
         font-weight: bold;
@@ -195,7 +193,7 @@ table.main-info td {
 }
 
 /* Small Screens */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .big-date {
         display: none;
     }
@@ -246,10 +244,6 @@ table.main-info td {
     .schedule-left, .schedule-right, .faq, .contact {
         text-align: center;
         width: 100%;
-    }
-
-    .contact {
-        margin-top: 30px;
     }
 
     .bordered-container {
