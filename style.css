@@ -42,26 +42,6 @@ nav {
     border-bottom: 2px solid gray;
 }
 
-.row-where {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom: 2px solid gray;
-    background-image: url('img/barnsley-map.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    height: 350px;
-}
-
-.row-schedule {
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid gray;
-}
-
 .row-story {
     height: 200px;
     display: flex;
@@ -75,7 +55,9 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
     min-height: 250px;
+    padding: 30px;
 }
 
 .question {
@@ -88,14 +70,7 @@ nav {
     color: #777;
 }
 
-.bordered-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 50px;
-    padding: 5px;
-    background-color: white;
-}
+
 
 .outer-border {
     border: 2px solid #BBB;
@@ -126,11 +101,6 @@ nav {
     z-index: -1;
 }
 
-.schedule-left, .schedule-right, .faq, .contact {
-    text-align: center;
-    width: 50%;
-}
-
 .header-row {
     display: flex;
     align-items: center;
@@ -154,17 +124,6 @@ nav {
     margin: 20px;
 }
 
-.big-date {
-    font-size: 192px;
-    font-weight: bold;
-    color: #DDD;
-    position: absolute;
-    left: 20px;
-    z-index: -1;
-    white-space: nowrap;
-    letter-spacing: 1vw;
-}
-
 h1 {
     margin: 10px;
 }
@@ -182,4 +141,123 @@ table.main-info th {
 
 table.main-info td {
     padding: 10px;
+}
+
+/* Large Screens */
+@media only screen and (min-width: 501px) {
+    .big-date {
+        font-size: 192px;
+        font-weight: bold;
+        color: #DDD;
+        position: absolute;
+        left: 20px;
+        z-index: -1;
+        white-space: nowrap;
+        letter-spacing: 1vw;
+    }
+
+    .row-where {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 2px solid gray;
+        background-image: url('img/barnsley-map.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 350px;
+    }
+
+    .row-schedule {
+        min-height: 350px;
+        max-height: 360px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid gray;
+    }
+
+    .schedule-left, .schedule-right, .faq, .contact {
+        text-align: center;
+        width: 50%;
+    }
+
+    .bordered-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 50px;
+        padding: 5px;
+        background-color: white;
+    }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 500px) {
+    .big-date {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-row {
+        display: block;
+        text-align: center;
+        border-bottom: 2px solid gray;
+    }
+
+    .row-when {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid gray;
+    }
+
+    .row-where {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid gray;
+        background-image: url('img/barnsley-map.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 350px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .row-schedule {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid gray;
+    }
+
+    .schedule-left, .schedule-right, .faq, .contact {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact {
+        margin-top: 30px;
+    }
+
+    .bordered-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px;
+        background-color: white;
+    }
+    
 }
