@@ -34,6 +34,7 @@ nav {
     margin: 0;
     display: flex;
     align-items: center;
+    z-index: 99;
 }
 
 .nav-link {
@@ -152,6 +153,25 @@ table.main-info td {
     padding: 10px;
 }
 
+.photo {
+    max-height: 300px;
+    max-width: 80vw;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.photo-controls {
+    text-align: center;
+}
+
+.prev-control {
+    left: 0
+}
+
+.next-control {
+    right: 0
+}
+
 /* Large Screens */
 @media only screen and (min-width: 601px) {
     .big-date {
@@ -207,10 +227,85 @@ table.main-info td {
         padding: 5px;
         background-color: white;
     }
+
+    .big-photo {
+        max-height: 90vh;
+        max-width: 90vw;
+    }
+
+    .big-photo-control {
+        font-weight: bold;
+        cursor: pointer;
+        color: gray;
+        font-size: 32px;
+        background-color: #EEE;
+        height: 100vh;
+        width: 10vw;
+        max-width: 100px;
+        min-width: 50px;
+        border: 0;
+    }
+
+    .thumbnails {
+        overflow: hidden;
+        width: 200vw;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .photo-control {
+        font-size: 48px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 1;
+        width: 100px;
+        position: absolute;
+        height: 350px;
+        color: #505050;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .photo-control:hover {
+        background-color: rgba(0,0,0,.2);
+    }
+
+    .zoom-photo {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+    }
+    
+    .zoom-photo-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .close-btn {
+        font-size: 48px;
+        cursor: pointer;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+    }
 }
 
 /* Small Screens */
 @media only screen and (max-width: 600px) {
+    .hide-mobile {
+        display: none;
+    }
+
     .big-date {
         display: none;
     }
@@ -269,6 +364,38 @@ table.main-info td {
         justify-content: flex-start;
         padding: 5px;
         background-color: white;
+    }
+
+    .photo-control {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 1;
+        width: 50px;
+        position: absolute;
+        height: 350px;
+        color: #505050;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .zoom-photo {
+        display: none;
+        position: fixed;
+        left: -100px;
+        top: -100px;
+        height: 1px;
+        width: 1px;
+    }
+    
+    .zoom-photo-container {
+        display: none;
+    }
+    
+    .close-btn {
+        display: none;
     }
     
 }
