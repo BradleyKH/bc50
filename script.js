@@ -1,5 +1,8 @@
 const photos = [
     'photos/Edited/Couple Toast.jpg',
+    'photos/Edited/Chez Fonfon.jpg',
+    'photos/Edited/Mom & Dad.jpg',
+    'photos/Edited/Lauras Wedding.jpg',
     'photos/Edited/Altar Mom.jpg',
     'photos/Edited/BBQ2.jpg',
     'photos/Edited/Birth Announcement2.jpg',
@@ -52,8 +55,7 @@ const setImages = () => {
     document.getElementById('photo-2').src = photos[calcIndex(photoIndex - 2)]
     document.getElementById('photo-3').src = photos[calcIndex(photoIndex - 3)]
     document.getElementById('photo-4').src = photos[calcIndex(photoIndex - 4)]
-    document.getElementById('photo-5').src = photos[calcIndex(photoIndex - 5)]
-    
+    document.getElementById('photo-5').src = photos[calcIndex(photoIndex - 5)]   
 }
 
 const openZoomPhoto = indexChange => {
